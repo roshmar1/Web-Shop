@@ -1,12 +1,9 @@
 footer {
   height: 50px;
   width: 100%;
-  position: absolute;
   bottom: 0;
+  position: fixed;
   background-color: #fff;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
 }
 footer .footer-content {
   justify-content: center;

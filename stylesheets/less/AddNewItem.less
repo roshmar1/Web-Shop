@@ -7,14 +7,14 @@ body {
     background: linear-gradient(to right, #f5f7f6, #5ca0f2);
     color: #D7D7EF;
     font-family: 'Lato', sans-serif;
-    margin: 0;
-    
+    margin: 0;    
 }
 
 main
 {   
     padding-top: 100px;
-    height: 100%;
+    height: 100%;  
+    position: relative;
 
     .item-wrapper{       
         display: flex;;
@@ -128,13 +128,17 @@ main
                             border-radius: 3px;
                             margin-right: 15px;
                             color: @lableColor;
-
+                            font-weight: bold;
+                            
                             &:hover{
                                 background-color: rgba(255, 255, 255, 0.3);                               
                             }
 
                             &:focus{
                                 outline-color: transparent;                                
+                            }
+                            &:active{
+                                color: gray;
                             }
                         }
                     }
