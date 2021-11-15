@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="../stylesheets/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/css/AddNewItem.css">
+
+    <script src="less.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav-logo">
+                <a class="" href="../Index.html">
+                    <h3>
+                        My Site
+                    </h3>
+                </a>
+            </div>     
+
+            <ul>
+                <li><a href="" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">Storage</a></li>
+                <li><a href="../View/AddNewItem.html" class="nav-link" active>Upload Iteam</a></li>
+            </ul>             
+        </nav>
+    </header>
+    <main>
+        <div class="item-wrapper">
+            <div class="iteam-container">
+                <div class="iteam">
+                    <h2 class="iteam-header">UPLOAD YOUR ITEAM</h2>
+                    <form enctype="multipart/form-data" method="post" asp-action="AddNewImage" asp-controller="Image" class="iteam-form">
+
+                        <div class="iteam-input-wrapper">
+                            <label for="ItemName" class="iteam-lable">Name:</label>
+                            <input type="text" class="iteam-input" id="ItemName" >
+                        </div>
+                        <div class="iteam-input-wrapper">
+                            <label for="ItemDescrimption" class="iteam-lable">Descrimption:</label>
+                            <input type="text" class="iteam-input" id="ItemDescrimption">
+                        </div>
+                        <div class="iteam-input-wrapper">
+                            <label for="ItemCategory" class="iteam-lable" >Category:</label>
+                            <input type="text" class="iteam-input" id="ItemCategory">
+                        </div>
+
+                        <div class="iteam-file-drop-area">
+                            <span class="iteam-choose-file-button">Choose files</span>
+                            <span class="iteam-file-message">or drag and drop files here</span>
+                            <input class="iteam-file-input" type="file" multiple>
+                        </div>
+                        <div class="iteam-form-btn-wrapper">
+                            <button class="iteam-form-btn" type="button">Clear</button>
+                            <button class="iteam-form-btn" type="submit"  value="Upload">Upload</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="" >
+        <div class="footer-content" >
+                <span class="footer-copyright">© 2020 Copyright:<span>
+                <a class="footer-link" href="../Index.html">MyStore.com</a>
+         </div>
+    </footer>
+</body>
+
+</html>

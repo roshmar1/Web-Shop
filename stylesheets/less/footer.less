@@ -1,0 +1,32 @@
+@footer-background-color: #fff;
+@footer-text-color:#5ca0f2;
+
+footer
+{   
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: @footer-background-color;  
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .footer-content{
+        justify-content: center;
+        display: flex;
+        width: auto;
+        align-items: center;    
+        height: 100%;
+
+        .footer-copyright{
+           color: @footer-text-color;
+        }
+
+        .footer-link{
+            text-decoration: none;
+            color: @footer-text-color;
+        }
+    }
+}

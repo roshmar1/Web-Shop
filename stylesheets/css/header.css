@@ -1,0 +1,46 @@
+header nav {
+  display: flex;
+  background-color: #fff;
+  padding: 0 10px 0 10px;
+  flex-direction: row;
+  align-content: center;
+}
+header nav .nav-logo {
+  margin-left: 10%;
+  display: flex;
+  top: 50%;
+}
+header nav .nav-logo a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  align-self: center;
+}
+header nav .nav-logo a h3 {
+  color: black;
+  font-weight: bold;
+}
+header nav ul {
+  display: flex;
+  margin: 0;
+}
+header nav ul li {
+  padding: 10px;
+  display: inline;
+}
+header nav ul li a {
+  float: left;
+  color: #5ca0f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+header nav ul li:hover {
+  background-color: #ddd;
+  color: black;
+}
+header nav ul li a.active {
+  background-color: #5ca0f2;
+  color: transparent;
+}

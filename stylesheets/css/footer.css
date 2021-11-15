@@ -1,0 +1,24 @@
+footer {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+footer .footer-content {
+  justify-content: center;
+  display: flex;
+  width: auto;
+  align-items: center;
+  height: 100%;
+}
+footer .footer-content .footer-copyright {
+  color: #5ca0f2;
+}
+footer .footer-content .footer-link {
+  text-decoration: none;
+  color: #5ca0f2;
+}
