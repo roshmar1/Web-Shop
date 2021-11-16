@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "linq": "^4.0.0"
+  },
+  "name": "web-shop",
+  "version": "1.0.0",
+  "main": "Index.js",
+  
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshmar1/Web-Shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshmar1/Web-Shop/issues"
+  },
+  "homepage": "https://github.com/roshmar1/Web-Shop#readme",
+  "description": ""
+}
