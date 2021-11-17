@@ -7,34 +7,34 @@ body {
     background: linear-gradient(to right, #f5f7f6, #5ca0f2);
     color: #D7D7EF;
     font-family: 'Lato', sans-serif;
-    margin: 0;    
+    margin: 0;
 }
 
-main
-{   
+main {
     padding-top: 100px;
-    height: 100%;  
+    height: 100%;
     position: relative;
 
-    .item-wrapper{       
-        display: flex;;
-        justify-content: center;        
+    .item-wrapper {
+        display: flex;
+        ;
+        justify-content: center;
 
-        .iteam-container{           
+        .iteam-container {
             align-items: center;
 
-            .iteam{
+            .iteam {
                 display: flex;
-                flex-direction: column;               
-                align-items: center;                          
-                 
-                .iteam-header{
-                   display: flex;
-                   color: @lableColor;
-                   margin-bottom: 40px;
+                flex-direction: column;
+                align-items: center;
+
+                .iteam-header {
+                    display: flex;
+                    color: @lableColor;
+                    margin-bottom: 40px;
                 }
 
-                .iteam-form{
+                .iteam-form {
                     display: flex;
                     flex-direction: column;
                     justify-content: end;
@@ -42,25 +42,26 @@ main
                     align-items: flex-end;
                     position: relative;
 
-                    .iteam-input-wrapper{
+                    .iteam-input-wrapper {
                         margin-bottom: 7%;
-                        display:flex;
+                        display: flex;
                         width: auto;
                         float: right;
                         padding-right: 10px;
 
-                        .iteam-lable{
+                        .iteam-lable {
                             padding-right: 10px;
-                            color:@lableColor;
+                            color: @lableColor;
                         }
 
-                        .iteam-input{
+                        .iteam-input {
                             border: 1px dashed #fff;
                             border-radius: 3px;
                             height: 30px;
+                            min-width: 260px;
 
-                            &:focus{
-                                outline-color: #5ca0f2;                               
+                            &:focus {
+                                outline-color: #5ca0f2;
                             }
                         }
                     }
@@ -75,7 +76,7 @@ main
                         border-radius: 3px;
                         transition: 0.2s;
                         margin-bottom: 7%;
-                        
+
                         .iteam-choose-file-button {
                             flex-shrink: 0;
                             background-color: #fff;
@@ -87,7 +88,7 @@ main
                             text-transform: uppercase;
                             color: #5ca0f2;
                         }
-                        
+
                         .iteam-file-message {
                             color: #fff;
                             font-size: small;
@@ -109,15 +110,15 @@ main
                         }
                     }
 
-                    .iteam-form-btn-wrapper{
+                    .iteam-form-btn-wrapper {
                         display: flex;
                         flex-direction: row;
                         width: 100%;
                         justify-content: end;
-                        text-align: center;  
+                        text-align: center;
 
-                        .iteam-form-btn{                           
-                            align-items: center;                        
+                        .iteam-form-btn {
+                            align-items: center;
                             display: flex;
                             max-width: 90px;
                             max-height: 40px;
@@ -129,15 +130,16 @@ main
                             margin-right: 15px;
                             color: @lableColor;
                             font-weight: bold;
-                            
-                            &:hover{
-                                background-color: rgba(255, 255, 255, 0.3);                               
+
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.3);
                             }
 
-                            &:focus{
-                                outline-color: transparent;                                
+                            &:focus {
+                                outline-color: transparent;
                             }
-                            &:active{
+
+                            &:active {
                                 color: gray;
                             }
                         }
@@ -147,8 +149,3 @@ main
         }
     }
 }
-
-
-
-
-
