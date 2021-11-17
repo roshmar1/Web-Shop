@@ -1,8 +1,10 @@
 const {basketAdd} = require("./Basket");
+const {basketRemove} = require('./Basket');
+const {basketPage} = require('./Basket');
 
 const addToBasket = (button) => {    
 
-    let elements = button.getAttribute("value");
+    let elementsValue = button.getAttribute("value");
     let elementClassName = button.classList.contains("card-btn");
     console.log(elementClassName);
     
@@ -10,25 +12,31 @@ const addToBasket = (button) => {
         button.classList.add("card-btn-added");
         button.classList.remove("card-btn");
 
-        basketAdd();
-        //sessionStorage.setItem( , 'value');
+        basketAdd(elementsValue);       
     }
-    else{
+    else{        
         button.classList.add("card-btn");
         button.classList.remove("card-btn-added");
+
+        basketRemove(elementsValue);
     }
 }   
 
-const fullThePage = (category) => {
-    
+const fullThePage = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+
     const myNode = document.getElementById("storage-container");
     myNode.innerHTML = '';   
 
+    if(category === "basketPage"){
+        basketPage();
+    }
     for (let i = 0; i < localStorage.length; i++){
 
         let iteamObject = JSON.parse(localStorage.getItem(localStorage.key(i)));         
 
-        switch (category.getAttribute("value")) {
+        switch (category) {
             case 'All':
                 addCard(iteamObject);
                 break;
@@ -53,9 +61,20 @@ const addCard = (iteamObject) => {
     
     let span = clone.querySelector("span").innerHTML = iteamObject.description;  
 
-    console.log(clone);
+    let btn = clone.querySelector("button")
+    btn.setAttribute('value',iteamObject.name);
+
+    if (sessionStorage.getItem(iteamObject.name) === null) {
+        btn.classList.add("card-btn");
+        btn.classList.remove("card-btn-added");
+        btn.textContent = "Add to basket";
+    }else{        
+        btn.classList.add("card-btn-added");
+        btn.classList.remove("card-btn");   
+        btn.textContent = "Remove";    
+    }
 
     main.appendChild(clone)
 }
 
-module.exports = {addToBasket,fullThePage}
+module.exports = {addToBasket,fullThePage,addCard}

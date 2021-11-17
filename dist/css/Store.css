@@ -44,8 +44,9 @@ main {
 .card-wrapper .card .card-description-wrapper .card-description {
   height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
   color: gray;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
   width: 230px;
 }
 .card-wrapper .card .card-description-wrapper .card-description::-webkit-scrollbar {
@@ -78,17 +79,8 @@ main {
   font-weight: bold;
   color: gray;
   height: 40px;
-  background-color: transparent;
+  background-color: #fff;
   border-radius: 8px;
-}
-.card-wrapper .card .card-btn-wrapper .card-btn:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.card-wrapper .card .card-btn-wrapper .card-btn:focus {
-  outline-color: transparent;
-}
-.card-wrapper .card .card-btn-wrapper .card-btn:active {
-  color: gray;
 }
 .card-wrapper .card .card-btn-wrapper .card-btn-added {
   display: flex;
@@ -100,16 +92,4 @@ main {
   height: 40px;
   background-color: #5ca0f2;
   border-radius: 8px;
-}
-.card-wrapper .card .card-btn-wrapper .card-btn-added:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.card-wrapper .card .card-btn-wrapper .card-btn-added:focus {
-  background-color: #5ca0f2;
-}
-.card-wrapper .card .card-btn-wrapper .card-btn-added:active {
-  color: gray;
-}
-.card-wrapper .card .card-btn-wrapper .card-btn-added:visited {
-  background-color: #5ca0f2;
 }

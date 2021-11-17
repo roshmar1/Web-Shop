@@ -51,8 +51,9 @@ main {
             .card-description {
                 height: 100%;
                 overflow-y: scroll;
+                overflow-x: hidden;
                 color: gray;
-                text-overflow: ellipsis;
+                word-wrap: break-word;
                 width: 230px;
 
                 &::-webkit-scrollbar {
@@ -84,27 +85,15 @@ main {
 
             .card-btn {
                 display: flex;
-                margin: 10px;
-                background-color: transparent;
+                margin: 10px;                
                 border: 2px solid gray;
                 align-items: center;
                 font-weight: bold;
                 color: gray;
                 height: 40px;
-                background-color: transparent;
+                background-color: #fff;
                 border-radius: 8px;
 
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0.3);
-                }
-
-                &:focus {
-                    outline-color: transparent;
-                }
-
-                &:active {
-                    color: gray;
-                }
             }
 
             .card-btn-added {
@@ -117,23 +106,6 @@ main {
                 height: 40px;
                 background-color: #5ca0f2;
                 border-radius: 8px;
-
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0.3);                    
-                }
-
-                &:focus {
-                    background-color: #5ca0f2;
-                }
-
-                &:active {
-                    color: gray;
-                }
-
-                &:visited {
-                    background-color: #5ca0f2;
-                }
-
             }
         }
     }
