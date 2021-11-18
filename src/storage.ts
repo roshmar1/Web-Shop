@@ -77,7 +77,7 @@ const addCard = (iteamObject:Iteam) => {
 
     let main = document.getElementById('storage-container');  
     let template = document.querySelector('#card-teamplate') as HTMLTemplateElement;
-    let clone = template.cloneNode(true) as Element;
+    let clone = template.content.cloneNode(true) as Element;
     
     let img = clone.querySelector("img");
 
@@ -89,10 +89,10 @@ const addCard = (iteamObject:Iteam) => {
     }
     
    
-    let span = (clone.parentNode).querySelector("span");
+    let span = clone.querySelector("span");
     span!.innerHTML = iteamObject.description;  
 
-    let btn = (clone.parentNode).querySelector("button");
+    let btn = clone.querySelector("button");
 
     btn!.setAttribute('value',iteamObject.name);
 

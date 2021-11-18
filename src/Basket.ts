@@ -1,3 +1,4 @@
+import { Iteam } from "./Iteam";
 import {addCard} from "./storage";
 
 const  basketAdd = (elementsValue:string) => {         
@@ -47,10 +48,9 @@ const basketPage = () => {
 
         if(iteam!= null)
         {
-            let iteamObject = JSON.parse(iteam);     
-        }
-       
-        addCard(iteamObject);
+            let iteamObject:Iteam = JSON.parse(iteam);     
+            addCard(iteamObject);
+        }               
     }
 }
 
